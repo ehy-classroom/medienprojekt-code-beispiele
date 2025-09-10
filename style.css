@@ -1,5 +1,85 @@
 /*
 Code Beispiele im Kontext des Moduls Medienprojekt.
 Stylesheet für allgemeine Stile der Code Beispiele.
-Version: 1.0.0
+Version: 1.0.1
 */
+
+
+
+/*--------------------------
+RESET
+---------------------------*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}  
+
+ul {
+    list-style: none;
+}
+
+/*--------------------------
+LAYOUT
+---------------------------*/
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,figure {
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 75rem;
+    padding: 1rem;
+}
+
+
+/*--------------------------
+TYPOGRAPHY
+---------------------------*/
+
+/* 
+Inter Font-Family von Rasmus Andersson mit Fallback und Variable Font Support.
+https://rsms.me/inter/ 
+*/
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+
+
+/*--------------------------
+COLOR & STYLE
+---------------------------*/
+
+/**-----
+Color Backgrounds
+-----**/
+
+header.main-header {
+ background: hsla(199, 21%, 55%, 1.0);
+}
+
+
+/**-----
+Color Type
+-----**/
+
+body {
+    color: hsl(210, 10%, 20%);
+}
