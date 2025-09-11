@@ -1,49 +1,62 @@
 /*
 Code Beispiele im Kontext des Moduls Medienprojekt.
 Stylesheet für allgemeine Stile der Code Beispiele.
-Version: 1.0.1
+Version: 1.0.2
 */
-
-
 
 /*--------------------------
 RESET
 ---------------------------*/
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}  
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /*--------------------------
 LAYOUT
 ---------------------------*/
 
-h1,h2,h3,h4,h5,h6,p,ul,ol,figure {
-    margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  margin-bottom: 1rem;
 }
 
 .container {
-    max-width: 75rem;
-    padding: 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
+aside.section-sidebar {
+  padding: 1rem;
+}
 
 /*--------------------------
 TYPOGRAPHY
@@ -55,13 +68,33 @@ https://rsms.me/inter/
 */
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* fix for Chrome */
 }
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
+/**-----
+Type Sizes & Spaces
+-----**/
 
+body {
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+/**-----
+Type Weights
+-----**/
+
+.main-nav > ul > li > a {
+  font-weight: 600;
+}
 
 /*--------------------------
 COLOR & STYLE
@@ -72,14 +105,111 @@ Color Backgrounds
 -----**/
 
 header.main-header {
- background: hsla(199, 21%, 55%, 1.0);
+  background: hsla(199, 21%, 42%, 1);
 }
 
+aside.section-sidebar {
+  background: hsla(199, 21%, 76%, 1);
+}
+
+footer.main-footer {
+  background: hsla(199, 55%, 13%, 1);
+}
 
 /**-----
 Color Type
 -----**/
 
 body {
-    color: hsl(210, 10%, 20%);
+  color: hsl(199, 55%, 13%);
+}
+
+header.main-header,
+footer.main-footer {
+  color: hsl(199, 3%, 97%);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: hsl(34, 97%, 55%);
+}
+
+/*--------------------------
+COMPONENTS
+---------------------------*/
+
+/**-----
+Comp Card Grid
+-----**/
+    
+.card-grid > * {
+  border: 1px solid hsl(199, 55%, 13%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: hsl(199, 21%, 97%);
+}
+
+/*--------------------------
+RESPONSIVE
+Breakpoints:
+580px
+60rem
+75rem
+---------------------------*/
+
+/* Tablet Portrait: 580px und größer */
+@media (min-width: 580px) {
+}
+
+/* Desktop Small: 60rem und größer */
+@media (min-width: 60rem) {
+  /**-----
+ Layout Sidebar Flex
+ -----**/
+  .layout-sidebar-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .layout-sidebar-flex > h2 {
+    width: 100%;
+  }
+
+  .layout-sidebar-flex .section-main {
+    width: 70%;
+  }
+  .layout-sidebar-flex .section-sidebar {
+    width: 30%;
+  }
+
+  /**-----
+Comp Nav Bar Grid
+-----**/
+
+  nav.navbar-grid > ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1rem;
+    justify-content: start;
+  }
+
+  /**-----
+Comp Card Grid
+-----**/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 
+  repeat(auto-fit, 
+  minmax(250px, 
+  1fr));
+  gap: 1rem;
+  padding-right: 1rem;
+}
+}
+
+/* Desktop Large: 75rem und größer */
+@media (min-width: 75rem) {
 }

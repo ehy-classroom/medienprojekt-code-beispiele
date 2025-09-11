@@ -15,9 +15,10 @@
             <p>Zur Verfügung gestellt von Enno Hyttrek im Rahmen des Lehrmoduls <em>Medienprojekt</em></p>
         </div>
     </header>
-    <nav class="navbar main-nav">
+    <nav class="navbar navbar-grid main-nav">
         <ul class="container">
             <li><a href="#">Startseite</a></li>
+            <li><a href="#">Themen</a></li>
             <li class="dropdown">
                 <a href="#html-boilerplates">HTML Boilerplates</a>
                 <ul class="dropdown-menu">
@@ -31,42 +32,52 @@
     </nav>
     <main class="main-content">
         <section id="html-boilerplates">
-            <div class="container">
+            <div class="container layout-sidebar-flex">
                 <h2>HTML Boilerplates</h2>
                 <p>Eine Auswahl von HTML Boilerplates für verschiedene Anwendungsfälle.</p>
-                
-                <article>
-                    <h3>Minimal Boilerplate</h3>
-                    <p>Das absolute Minimum für eine HTML5-Seite. Enthält nur die notwendigsten Meta-Tags und einen leeren Body-Bereich. Perfekt als Ausgangspunkt für komplett neue Projekte.</p>
-                    <p><a href="boilerplates/html5-boilerplate-01-minimal.html">Zur Datei ...</a></p>
-                </article>
 
-                <article>
-                    <h3>Basic Struktur Boilerplate</h3>
-                    <p>Grundlegende semantische HTML5-Struktur mit leeren Header, Navigation, Main und Footer Bereichen. Ideal für strukturierte Websites ohne vorgefertigten Inhalt.</p>
-                    <p><a href="boilerplates/html5-boilerplate-02-basic-minimal.html">Zur Datei ...</a></p>
-                </article>
+                <div class="wrapper section-main card-grid">
+                    <article>
+                        <h3>Minimal Boilerplate</h3>
+                        <p>Das absolute Minimum für eine HTML5-Seite. Enthält nur die notwendigsten Meta-Tags und einen
+                            leeren Body-Bereich. Perfekt als Ausgangspunkt für komplett neue Projekte.</p>
+                        <p><a href="boilerplates/html5-boilerplate-01-minimal.html">Zur Datei ...</a></p>
+                    </article>
 
-                <article>
-                    <h3>Semantisches Boilerplate mit Inhalt</h3>
-                    <p>Vollständige semantische HTML5-Struktur mit Beispielinhalten. Enthält Navigation, Sections mit Artikeln und eine Sidebar. Zeigt Best Practices für semantisch korrektes HTML5.</p>
-                    <p><a href="boilerplates/html5-boilerplate-03-basic-semantisch.html">Zur Datei ...</a></p>
-                </article>
+                    <article>
+                        <h3>Basic Struktur Boilerplate</h3>
+                        <p>Grundlegende semantische HTML5-Struktur mit leeren Header, Navigation, Main und Footer
+                            Bereichen. Ideal für strukturierte Websites ohne vorgefertigten Inhalt.</p>
+                        <p><a href="boilerplates/html5-boilerplate-02-basic-minimal.html">Zur Datei ...</a></p>
+                    </article>
 
-                <article>
-                    <h3>CSS-Struktur Boilerplate</h3>
-                    <p>Erweiterte semantische Struktur mit CSS-Klassen und Container-Divs für Layout. Enthält zusätzliche Navigation im Footer und ist produktionsreif mit Styling-Hooks vorbereitet.</p>
-                    <p><a href="boilerplates/html5-boilerplate-04-basic-semantisch-struktur.html">Zur Datei ...</a></p>
-                </article>
+                    <article>
+                        <h3>Semantisches Boilerplate mit Inhalt</h3>
+                        <p>Vollständige semantische HTML5-Struktur mit Beispielinhalten. Enthält Navigation, Sections
+                            mit Artikeln und eine Sidebar. Zeigt Best Practices für semantisch korrektes HTML5.</p>
+                        <p><a href="boilerplates/html5-boilerplate-03-basic-semantisch.html">Zur Datei ...</a></p>
+                    </article>
 
-                <aside>
+                    <article>
+                        <h3>CSS-Struktur Boilerplate</h3>
+                        <p>Erweiterte semantische Struktur mit CSS-Klassen und Container-Divs für Layout. Enthält
+                            zusätzliche Navigation im Footer und ist produktionsreif mit Styling-Hooks vorbereitet.</p>
+                        <p><a href="boilerplates/html5-boilerplate-04-basic-semantisch-struktur.html">Zur Datei ...</a>
+                        </p>
+                    </article>
+                </div><!--.section-main-->
+
+                <aside class="section-sidebar">
                     <h2>Was sind Boilerplates?</h2>
                     <p>Boilerplates sind vorgefertigte Code-Strukturen, die als Ausgangspunkt für neue Projekte dienen. Sie enthalten häufig die grundlegenden Elemente und Best Practices, die für die Entwicklung einer bestimmten Art von Anwendung erforderlich sind.</p>
                     <p>Hier ein paar Weblinks zum Thema</p>
                     <ul>
-                        <li><a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Grundger%C3%BCst" target="_blank">HTML Grundgerüst Tutorial - SELFHTML</a></li>
-                        <li><a href="https://de.wikipedia.org/wiki/Boilerplate-Code" target="_blank">Boilerplate-Code - Wikipedia</a></li>
-                        <li><a href="https://www.impulsphase.de/wiki/boilerplate" target="_blank">Boilerplate - impulsphase</a></li>
+                        <li><a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Grundger%C3%BCst"
+                                target="_blank">HTML Grundgerüst Tutorial - SELFHTML</a></li>
+                        <li><a href="https://de.wikipedia.org/wiki/Boilerplate-Code" target="_blank">Boilerplate-Code -
+                                Wikipedia</a></li>
+                        <li><a href="https://www.impulsphase.de/wiki/boilerplate" target="_blank">Boilerplate -
+                                impulsphase</a></li>
                     </ul>
                 </aside>
             </div>
@@ -75,17 +86,14 @@
 
     <footer class="main-footer">
         <div class="container">
-            <nav class="navbar footer-nav">
-                <ul class="container">
-                    <li><a href="#">Menüeintrag</a></li>
-                    <li><a href="#">Menüeintrag</a></li>
-                    <li><a href="#">Menüeintrag</a></li>
-                    <li><a href="#">Menüeintrag</a></li>
-                    <li><a href="#">Menüeintrag</a></li>
+            <nav class="navbar navbar-grid footer-nav">
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
                 </ul>
             </nav>
 
-            <p>&copy;Jahr Name</p>
+            <p>&copy;2025 Enno Hyttrek</p>
         </div>
     </footer>
 </body>
