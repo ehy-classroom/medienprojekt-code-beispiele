@@ -1,7 +1,7 @@
 /*
 Code Beispiele im Kontext des Moduls Medienprojekt.
 Stylesheet für allgemeine Stile der Code Beispiele.
-Version: 1.0.2
+Version: 1.0.3
 */
 
 /*--------------------------
@@ -54,6 +54,14 @@ figure {
   padding: 1rem;
 }
 
+main {
+  min-height: 68vh;
+}
+
+footer.main-footer {
+  min-height: 21vh;
+}
+
 aside.section-sidebar {
   padding: 1rem;
 }
@@ -88,6 +96,12 @@ body {
   font-weight: 300;
 }
 
+footer,
+.sidebar,
+.card p {
+  font-size: 0.8em;
+}
+
 /**-----
 Type Weights
 -----**/
@@ -99,6 +113,27 @@ Type Weights
 /*--------------------------
 COLOR & STYLE
 ---------------------------*/
+
+/**-----
+Color Vars
+-----**/
+
+:root {
+  --color-primary: hsl(199, 55%, 13%);
+  --color-secondary: hsl(199, 21%, 42%);
+  --color-accent-100: hsl(34, 97%, 55%);
+  --color-accent-210: hsl(89, 21%, 89%);
+  --color-accent-250: hsl(89, 76%, 55%);
+  --color-accent-290: hsl(89, 97%, 21%);
+  --color-grey-cool-100: hsl(199, 21%, 97%);
+  --color-grey-cool-500: hsl(199, 21%, 76%);
+  --color-grey-cool-900: hsl(199, 55%, 13%);
+
+  /*Color Tokens*/
+  --color-background-btn: var(--color-accent-290);
+  --color-text-btn: var(--color-accent-250);
+  --color-border-btn: var(--color-accent-250);
+}
 
 /**-----
 Color Backgrounds
@@ -135,19 +170,75 @@ a:active {
   color: hsl(34, 97%, 55%);
 }
 
+/**-----
+Style Corners
+-----**/
+.sidebar,
+.card {
+  border-radius: 0.5rem;
+}
+
 /*--------------------------
 COMPONENTS
 ---------------------------*/
 
 /**-----
+Comp Btn 
+-----**/
+
+a.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border-btn);
+  border-radius: 2em;
+  background: var(--color-background-btn);
+  color: var(--color-text-btn);
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/**-----
+Comp Card 
+-----**/
+
+.card {
+  border: 1px solid hsl(199, 55%, 13%);
+  padding: 1rem;
+  padding-bottom: 0;
+  background: hsl(199, 21%, 97%);
+}
+
+.card h3 {
+  min-height: 3em;
+}
+
+.card p:nth-last-child(2) {
+  min-height: 10em;
+}
+
+.card p:nth-last-child(3) {
+  position: relative;
+  min-height: 3em;
+}
+
+.card p:nth-last-child(3) > .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/**-----
 Comp Card Grid
 -----**/
-    
-.card-grid > * {
-  border: 1px solid hsl(199, 55%, 13%);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  background: hsl(199, 21%, 97%);
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*--------------------------
@@ -160,6 +251,13 @@ Breakpoints:
 
 /* Tablet Portrait: 580px und größer */
 @media (min-width: 580px) {
+  /**-----
+  Comp Card Grid - 2 spaltig
+  -----**/
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 1rem;
+  }
 }
 
 /* Desktop Small: 60rem und größer */
@@ -196,18 +294,11 @@ Comp Nav Bar Grid
   }
 
   /**-----
-Comp Card Grid
+Comp Card Grid - 3 spaltig
 -----**/
-
-.card-grid {
-  display: grid;
-  grid-template-columns: 
-  repeat(auto-fit, 
-  minmax(250px, 
-  1fr));
-  gap: 1rem;
-  padding-right: 1rem;
-}
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Desktop Large: 75rem und größer */

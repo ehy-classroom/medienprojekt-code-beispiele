@@ -2,6 +2,8 @@
 
 Eine Sammlung von HTML5-Boilerplates und Webdesign-Codebeispielen für das Lehrmodul **Medienprojekt** bei Enno Hyttrek.
 
+[https://ehy-classroom.github.io/medienprojekt-code-beispiele/](https://ehy-classroom.github.io/medienprojekt-code-beispiele/)
+
 ## Übersicht
 
 Dieses Projekt stellt eine strukturierte Sammlung von HTML5-Vorlagen und Webentwicklungsbeispielen zur Verfügung, die als Ausgangspunkt für neue Webprojekte dienen können.
